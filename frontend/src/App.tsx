@@ -1,13 +1,13 @@
-import { Route, Routes } from 'react-router-dom'
+import { FC, memo } from 'react'
+import { Router } from '@router/Router'
 
-import Home from '@pages/Home'
+import { GlobalStyle } from '@assets/styles/global.styled'
 
-function App() {
+export const App: FC = memo(() => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <>
+      <Router />
+      <GlobalStyle />
+    </>
   )
-}
-
-export default App
+})
